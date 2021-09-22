@@ -32,8 +32,6 @@ class AstCli < Formula
   end
 
   def install
-    pkgshare.mkpath
-    cp_r "assets", pkgshare
     bin.install "cx"
   end
 
