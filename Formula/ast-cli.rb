@@ -12,27 +12,36 @@ class AstCli < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.4/ast-cli_2.0.4_darwin_x64.tar.gz"
-      sha256 "14675524de88ee57d6c834f49f6978c93dd7577362e6545e4a2020c8f59c914f"
+      sha256 "ca30cc4143cfb6254a133b8c42ae06b6f2adb0d857a0e6e0d4e2c97b11dd83ff"
     end
     if Hardware::CPU.arm?
       url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.4/ast-cli_2.0.4_darwin_arm64.tar.gz"
-      sha256 "8644f0ad63f36e8ff43e1af8b4b08c1427e8967dfcb0b205352f423be2160f23"
+      sha256 "479dab37a24357bcc6eb04594280eb4639242dbe77dc9c74cee9a538f2897994"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.4/ast-cli_2.0.4_linux_x64.tar.gz"
-      sha256 "072c8b7c569d98869b89b23d94f7ef7be36b8baeb685992167cf006e2a191b6e"
+      sha256 "9d018dc48c6c31999f009fcefc46db244bf7ea13717aa83813a22260d28542c9"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.4/ast-cli_2.0.4_linux_arm64.tar.gz"
-      sha256 "1faa1b4dc85cf36d8dfacf74b12c8cbe525df7fed20fe7da32d4871bdd2b32ef"
+      sha256 "dff67bb02ce0a78e6371902d3b58c7cd2c97aa3b47cfee04fa06588a1e3ede25"
     end
   end
 
   def install
     bin.install "cx"
+    # Install bash completion
+    output = Utils.popen_read("#{bin}/cx utils completion -s bash")
+    (bash_completion/"cx").write output
+    # Install zsh completion
+    output = Utils.popen_read("#{bin}/cx utils completion -s zsh")
+    (zsh_completion/"_cx").write output
+    # Install fish completion
+    output = Utils.popen_read("#{bin}/cx utils completion -s fish")
+    (fish_completion/"cx.fish").write output
   end
 
   test do
