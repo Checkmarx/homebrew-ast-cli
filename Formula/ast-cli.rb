@@ -12,22 +12,22 @@ class AstCli < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.4/ast-cli_2.0.4_darwin_x64.tar.gz"
-      sha256 "ca30cc4143cfb6254a133b8c42ae06b6f2adb0d857a0e6e0d4e2c97b11dd83ff"
+      sha256 "42d21688729d95e4217d41f34ae78606398e658e01bfed40dba23adad225ec87"
     end
     if Hardware::CPU.arm?
       url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.4/ast-cli_2.0.4_darwin_arm64.tar.gz"
-      sha256 "479dab37a24357bcc6eb04594280eb4639242dbe77dc9c74cee9a538f2897994"
+      sha256 "801fdd3797e0703a6057b40e1b545afe2ed658be32d20c2745e8ab9ed5b67432"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.4/ast-cli_2.0.4_linux_x64.tar.gz"
-      sha256 "9d018dc48c6c31999f009fcefc46db244bf7ea13717aa83813a22260d28542c9"
+      sha256 "353a499c419dde0357a8e40dd86c82bbef9cd8ca0b4ec3887b77b4759f3d9244"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.4/ast-cli_2.0.4_linux_arm64.tar.gz"
-      sha256 "dff67bb02ce0a78e6371902d3b58c7cd2c97aa3b47cfee04fa06588a1e3ede25"
+      sha256 "dc1d8d1dc8cc6b3f3e65640e484fdab953b4f2f5bb2403761a47e20e99f0f547"
     end
   end
 
