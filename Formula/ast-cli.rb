@@ -7,7 +7,6 @@ class AstCli < Formula
   homepage "https://github.com/Checkmarx/ast-cli"
   version "2.0.15"
   license "Apache"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
