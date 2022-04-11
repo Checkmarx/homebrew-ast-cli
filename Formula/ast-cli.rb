@@ -11,19 +11,19 @@ class AstCli < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.16/ast-cli_2.0.16_darwin_amd64.tar.gz"
-      sha256 "edf2560b6841f6dee8ec5e35b8196c6cdf7d4d9f3b36c9266ce06b9f7d2fe084"
+      url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.16/ast-cli_2.0.16_darwin_x64.tar.gz"
+      sha256 "507644d755d3c5dcaad7e8c0653a941aa18ba29e2c357280c205de6f315e40a6"
     end
     if Hardware::CPU.arm?
       url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.16/ast-cli_2.0.16_darwin_arm64.tar.gz"
-      sha256 "678177b68d10b5f5a72e07ea0ca0c070ef6fa2d513b507dd1b3040909a8d4886"
+      sha256 "0e2af6b07e7450df3853d2e352975236c205280ec72ee674a20157157c80840c"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.16/ast-cli_2.0.16_linux_x64.tar.gz"
-      sha256 "36086486a7a9ebd92cd48985e3c35cd090ab3891ec9bd363c0a16a1bad51e7b0"
+      sha256 "d2e440eaf471e44c9d1b59ff00beb84fc9b0bb81da360e8a0ce689158cb4f17a"
     end
   end
 
