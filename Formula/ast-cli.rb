@@ -5,24 +5,25 @@
 class AstCli < Formula
   desc "CLI for AST"
   homepage "https://github.com/Checkmarx/ast-cli"
-  version "2.0.18"
+  version "2.0.19"
   license "Apache"
+  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.18/ast-cli_2.0.18_darwin_x64.tar.gz"
-      sha256 "6a8e576a16da759a55f3669add56a6507f9a3096d8a995a6dab41755f6193222"
+      url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.19/ast-cli_2.0.19_darwin_x64.tar.gz"
+      sha256 "40b489daf3372d42602ad81a6d83936415b794688c9f7d16e1731693034829b8"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.18/ast-cli_2.0.18_darwin_arm64.tar.gz"
-      sha256 "d9e2bc8cc9d035ea9afa373b0103eeeb734d2623ec0aae07543122ae9f0d0f82"
+      url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.19/ast-cli_2.0.19_darwin_arm64.tar.gz"
+      sha256 "613ded2fcfcc2172114b5c5b25b68f7d780b8b6183dbb933ca7734282b5468b8"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.18/ast-cli_2.0.18_linux_x64.tar.gz"
-      sha256 "0a3defd296341b9abafc552aef95ed8817805a6cce4d0bed23a2e36e4d0954cd"
+      url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.19/ast-cli_2.0.19_linux_x64.tar.gz"
+      sha256 "2d3d35561e385c3f6fcd91c6779e9b3db602a69d6ecabf74a58c19b3571876ca"
     end
   end
 
