@@ -5,39 +5,45 @@
 class AstCli < Formula
   desc "CLI for AST"
   homepage "https://github.com/Checkmarx/ast-cli"
-  version "2.0.19"
+  version "2.0.20"
   license "Apache"
-  bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.19/ast-cli_2.0.19_darwin_x64.tar.gz"
-      sha256 "40b489daf3372d42602ad81a6d83936415b794688c9f7d16e1731693034829b8"
-    end
-    if Hardware::CPU.arm?
-      url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.19/ast-cli_2.0.19_darwin_arm64.tar.gz"
-      sha256 "613ded2fcfcc2172114b5c5b25b68f7d780b8b6183dbb933ca7734282b5468b8"
+    url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.20/ast-cli_2.0.20_darwin_x64.tar.gz"
+    sha256 "83132ccab0a774153e51e890ada11ef536d03259fce23abc8350c939bd46b1fb"
+
+    def install
+      bin.install "cx"
+      # Install bash completion
+      output = Utils.popen_read("#{bin}/cx utils completion -s bash")
+      (bash_completion/"cx").write output
+      # Install zsh completion
+      output = Utils.popen_read("#{bin}/cx utils completion -s zsh")
+      (zsh_completion/"_cx").write output
+      # Install fish completion
+      output = Utils.popen_read("#{bin}/cx utils completion -s fish")
+      (fish_completion/"cx.fish").write output
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.19/ast-cli_2.0.19_linux_x64.tar.gz"
-      sha256 "2d3d35561e385c3f6fcd91c6779e9b3db602a69d6ecabf74a58c19b3571876ca"
-    end
-  end
+      url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.20/ast-cli_2.0.20_linux_x64.tar.gz"
+      sha256 "312087832ae5969338b2b53bcd505f74256a61167725f72f5987a6ef08c130df"
 
-  def install
-    bin.install "cx"
-    # Install bash completion
-    output = Utils.popen_read("#{bin}/cx utils completion -s bash")
-    (bash_completion/"cx").write output
-    # Install zsh completion
-    output = Utils.popen_read("#{bin}/cx utils completion -s zsh")
-    (zsh_completion/"_cx").write output
-    # Install fish completion
-    output = Utils.popen_read("#{bin}/cx utils completion -s fish")
-    (fish_completion/"cx.fish").write output
+      def install
+        bin.install "cx"
+        # Install bash completion
+        output = Utils.popen_read("#{bin}/cx utils completion -s bash")
+        (bash_completion/"cx").write output
+        # Install zsh completion
+        output = Utils.popen_read("#{bin}/cx utils completion -s zsh")
+        (zsh_completion/"_cx").write output
+        # Install fish completion
+        output = Utils.popen_read("#{bin}/cx utils completion -s fish")
+        (fish_completion/"cx.fish").write output
+      end
+    end
   end
 
   test do
