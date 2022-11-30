@@ -5,12 +5,12 @@
 class AstCli < Formula
   desc "CLI for AST"
   homepage "https://github.com/Checkmarx/ast-cli"
-  version "2.0.35"
+  version "2.0.36"
   license "Apache"
 
   on_macos do
-    url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.35/ast-cli_2.0.35_darwin_x64.tar.gz"
-    sha256 "9f2d2f70d79c605f3bc6890bb0890a679a26d07f1c19bebb88ba2b4fa3ce7783"
+    url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.36/ast-cli_2.0.36_darwin_x64.tar.gz"
+    sha256 "3a0fb8e024e7ec1840784b188d576abdb0d0f9f38e0b1faab307a864199d198d"
 
     def install
       bin.install "cx"
@@ -28,8 +28,8 @@ class AstCli < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.35/ast-cli_2.0.35_linux_x64.tar.gz"
-      sha256 "7d71dc0dac30aecd6213aa330d21038a69d1f110688405d48341cdd5a9cb5aaa"
+      url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.36/ast-cli_2.0.36_linux_x64.tar.gz"
+      sha256 "a41bfc27b0c1092e97da9faf055b8ff3d001c43ad4bdb4a6411acc2cae6a4d0a"
 
       def install
         bin.install "cx"
