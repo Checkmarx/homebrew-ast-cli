@@ -5,12 +5,12 @@
 class AstCli < Formula
   desc "CLI for Checkmarx One"
   homepage "https://github.com/Checkmarx/ast-cli"
-  version "2.0.49"
+  version "2.0.50"
   license "Apache"
 
   on_macos do
-    url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.49/ast-cli_2.0.49_darwin_x64.tar.gz"
-    sha256 "30ab65f5803995959cbfb3f5f257b4db58c0e80f98b42f82a4a25dd2c8053e9b"
+    url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.50/ast-cli_2.0.50_darwin_x64.tar.gz"
+    sha256 "bdc976bfcb7cb6a0f45462fee399d1e7f792dd7a683ed2cfc4fdeed4a5a6cfba"
 
     def install
       bin.install "cx"
@@ -28,25 +28,8 @@ class AstCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.49/ast-cli_2.0.49_linux_armv6.tar.gz"
-      sha256 "144dabbab8a53b9177fac0d4f204ca71ff0dfaf06ccd4cc73dee442c92a72f46"
-
-      def install
-        bin.install "cx"
-        # Install bash completion
-        output = Utils.popen_read("#{bin}/cx utils completion -s bash")
-        (bash_completion/"cx").write output
-        # Install zsh completion
-        output = Utils.popen_read("#{bin}/cx utils completion -s zsh")
-        (zsh_completion/"_cx").write output
-        # Install fish completion
-        output = Utils.popen_read("#{bin}/cx utils completion -s fish")
-        (fish_completion/"cx.fish").write output
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.49/ast-cli_2.0.49_linux_x64.tar.gz"
-      sha256 "0d8a9c020dd773f9231d078e410413772f66109371450785bf6d55f38cc49f0a"
+      url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.50/ast-cli_2.0.50_linux_armv6.tar.gz"
+      sha256 "e9db3f1d1a26c318f0924f09085cca694a93a8a9c58ad9e3f42d5559c1edf2ed"
 
       def install
         bin.install "cx"
@@ -62,8 +45,25 @@ class AstCli < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.49/ast-cli_2.0.49_linux_arm64.tar.gz"
-      sha256 "3e631f24b14bfabe1bbe32db25490a8ec21d44f93c7642df94f0d42cf9d3a362"
+      url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.50/ast-cli_2.0.50_linux_arm64.tar.gz"
+      sha256 "4714141d7c9c935f2cb7450570fcb029d6fe840e1321881d25504286fdfc43c6"
+
+      def install
+        bin.install "cx"
+        # Install bash completion
+        output = Utils.popen_read("#{bin}/cx utils completion -s bash")
+        (bash_completion/"cx").write output
+        # Install zsh completion
+        output = Utils.popen_read("#{bin}/cx utils completion -s zsh")
+        (zsh_completion/"_cx").write output
+        # Install fish completion
+        output = Utils.popen_read("#{bin}/cx utils completion -s fish")
+        (fish_completion/"cx.fish").write output
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.50/ast-cli_2.0.50_linux_x64.tar.gz"
+      sha256 "258556082cdcfe33ac813b3dd455ca6e3888facc1e6bb549a64db6fba495099b"
 
       def install
         bin.install "cx"
