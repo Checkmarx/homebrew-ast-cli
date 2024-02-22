@@ -5,12 +5,12 @@
 class AstCli < Formula
   desc "CLI for Checkmarx One"
   homepage "https://github.com/Checkmarx/ast-cli"
-  version "2.0.0-nightly"
+  version "2.0.69"
   license "Apache"
 
   on_macos do
-    url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.0-nightly/ast-cli_2.0.0-nightly_darwin_x64.tar.gz"
-    sha256 "1c63be1fe8db863e0093b40120d912b293229cddb12bbda2b5dc5cf7a6e5ad67"
+    url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.69/ast-cli_2.0.69_darwin_x64.tar.gz"
+    sha256 "14ad6141699942dc34a6f95027fc5e641266bc37233f63ebcbf7b7cc65420908"
 
     def install
       bin.install "cx"
@@ -28,8 +28,8 @@ class AstCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.0-nightly/ast-cli_2.0.0-nightly_linux_armv6.tar.gz"
-      sha256 "242b54a5c3027285d417d9022da7b9f1cab700517718f11380d2161c57ad2316"
+      url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.69/ast-cli_2.0.69_linux_armv6.tar.gz"
+      sha256 "ef22bc2e5ce69c7cea184bb84e68f4c4375911c7d6e2d997ad1a7ac08397d1c6"
 
       def install
         bin.install "cx"
@@ -45,8 +45,8 @@ class AstCli < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.0-nightly/ast-cli_2.0.0-nightly_linux_arm64.tar.gz"
-      sha256 "456f9684bea7c1efe309f87ec85251c3a043e621dcda51ffd8cc4840f9af1df0"
+      url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.69/ast-cli_2.0.69_linux_arm64.tar.gz"
+      sha256 "91fa9131829348b57c7282cc98eebf2fe8a26be551fd682f6ca2368123f55d51"
 
       def install
         bin.install "cx"
@@ -62,8 +62,8 @@ class AstCli < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.0-nightly/ast-cli_2.0.0-nightly_linux_x64.tar.gz"
-      sha256 "8779b940e1122c9e9c8208ed1a64708d74b31e0c318af9b451ada75afcf153a2"
+      url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.69/ast-cli_2.0.69_linux_x64.tar.gz"
+      sha256 "48a61f42461b49bcbd19588a598e831fcb26a221caadc7eba3d5bafa862e2339"
 
       def install
         bin.install "cx"
