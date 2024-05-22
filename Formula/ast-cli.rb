@@ -5,12 +5,12 @@
 class AstCli < Formula
   desc "CLI for Checkmarx One"
   homepage "https://github.com/Checkmarx/ast-cli"
-  version "2.1.2"
+  version "2.1.3"
   license "Apache"
 
   on_macos do
-    url "https://github.com/Checkmarx/ast-cli/releases/download/2.1.2/ast-cli_2.1.2_darwin_x64.tar.gz"
-    sha256 "a54a145b0ae767352bf7d2f2c0a731f75febf9f4a62204551d6791def22de375"
+    url "https://github.com/Checkmarx/ast-cli/releases/download/2.1.3/ast-cli_2.1.3_darwin_x64.tar.gz"
+    sha256 "9c1a0df2e3f35e0c4e4eeebda6d5b13c73c6102435dbdcf9a3972ffff74d894d"
 
     def install
       bin.install "cx"
@@ -28,8 +28,8 @@ class AstCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/Checkmarx/ast-cli/releases/download/2.1.2/ast-cli_2.1.2_linux_armv6.tar.gz"
-      sha256 "2bd6e7644ab939544679e571af51b761ac98de05ed4ce0db2621412d4ad3de37"
+      url "https://github.com/Checkmarx/ast-cli/releases/download/2.1.3/ast-cli_2.1.3_linux_armv6.tar.gz"
+      sha256 "bd1806a8a86d948a40d5a6cb6d2f072134523cd955f07c67da1bd5ea7b969b24"
 
       def install
         bin.install "cx"
@@ -45,8 +45,8 @@ class AstCli < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Checkmarx/ast-cli/releases/download/2.1.2/ast-cli_2.1.2_linux_arm64.tar.gz"
-      sha256 "3fd2c2bdd88f7e6f5c19e3b319b0905b064fdc170250f1b974b9594704945129"
+      url "https://github.com/Checkmarx/ast-cli/releases/download/2.1.3/ast-cli_2.1.3_linux_arm64.tar.gz"
+      sha256 "1ae34069e94f8198f6ad16bb1655e5b66e60e61848424bd53f675c80055ccdbf"
 
       def install
         bin.install "cx"
@@ -62,8 +62,8 @@ class AstCli < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Checkmarx/ast-cli/releases/download/2.1.2/ast-cli_2.1.2_linux_x64.tar.gz"
-      sha256 "85335fb68b3c6a0c8fe1bce98555213194fd6db572826bb52b511ed9415c249f"
+      url "https://github.com/Checkmarx/ast-cli/releases/download/2.1.3/ast-cli_2.1.3_linux_x64.tar.gz"
+      sha256 "23bd4a080a59eb20582ec5584ffcc3b8ba57edde8c237073f5b70bf1742b4e38"
 
       def install
         bin.install "cx"
