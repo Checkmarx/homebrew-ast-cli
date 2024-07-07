@@ -10,7 +10,7 @@ class AstCli < Formula
 
   on_macos do
     url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.0-nightly/ast-cli_2.0.0-nightly_darwin_x64.tar.gz"
-    sha256 "36c3968efdc24c5501cc40f1c0c03e5e280f2da434ec7302f0dfe77f5b7be434"
+    sha256 "a765008690461b40a9aff2fdd3c9119ec825427860dc12b8cbba38c733f89b99"
 
     def install
       bin.install "cx"
@@ -29,7 +29,7 @@ class AstCli < Formula
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.0-nightly/ast-cli_2.0.0-nightly_linux_armv6.tar.gz"
-      sha256 "25a14236e8a8efd16f718686c6bdc1a6f0c75bcf96e248c52cc38af1d6d23cdb"
+      sha256 "8b19ea0bdc1d42aec2fa57e1c434963cd415f462cc373aedf64169336f041c1e"
 
       def install
         bin.install "cx"
@@ -46,7 +46,7 @@ class AstCli < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.0-nightly/ast-cli_2.0.0-nightly_linux_arm64.tar.gz"
-      sha256 "9c4a092360c4ea7b48a9dc530409a7216dd3d9fddd2003f2ebd627c3b9de4367"
+      sha256 "a1f5e35502b11d36ac17b24aaabd38f13d29534847b5fe1eed850e2bdb8dc6ed"
 
       def install
         bin.install "cx"
@@ -63,7 +63,7 @@ class AstCli < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/Checkmarx/ast-cli/releases/download/2.0.0-nightly/ast-cli_2.0.0-nightly_linux_x64.tar.gz"
-      sha256 "fef16efa02ef06d42b45582a02a85745ec601e3053b6b6b8f3980ae3d3c22d36"
+      sha256 "93f0349a3f821e431d2511b609fadfef4a8951d4f303397dab47717d845062cb"
 
       def install
         bin.install "cx"
