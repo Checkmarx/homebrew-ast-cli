@@ -5,11 +5,11 @@
 class AstCli < Formula
   desc "CLI for Checkmarx One"
   homepage "https://github.com/Checkmarx/ast-cli"
-  version "2.3.54"
+  version "2.3.55"
   license "Apache"
 
   on_macos do
-    url "https://github.com/Checkmarx/ast-cli/releases/download/2.3.54/ast-cli_2.3.54_darwin_x64.tar.gz"
+    url "https://github.com/Checkmarx/ast-cli/releases/download/2.3.55/ast-cli_2.3.55_darwin_x64.tar.gz"
     sha256 "f24712bee593ea6a253dc0c9551ca5b51e6b1336baf3c3abc5281a4e93d5f3b7"
 
     def install
@@ -28,7 +28,7 @@ class AstCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/Checkmarx/ast-cli/releases/download/2.3.54/ast-cli_2.3.54_linux_armv6.tar.gz"
+      url "https://github.com/Checkmarx/ast-cli/releases/download/2.3.55/ast-cli_2.3.55_linux_armv6.tar.gz"
       sha256 "d897fb4260d70eed1329c0c50919e98a32ab19daf7836898faaa20de52252383"
 
       def install
@@ -45,7 +45,7 @@ class AstCli < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Checkmarx/ast-cli/releases/download/2.3.54/ast-cli_2.3.54_linux_arm64.tar.gz"
+      url "https://github.com/Checkmarx/ast-cli/releases/download/2.3.55/ast-cli_2.3.55_linux_arm64.tar.gz"
       sha256 "763a3a42d2c75d8272dd90f686162233509272bc026e46e3d3079878ce76d9c2"
 
       def install
@@ -62,7 +62,7 @@ class AstCli < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Checkmarx/ast-cli/releases/download/2.3.54/ast-cli_2.3.54_linux_x64.tar.gz"
+      url "https://github.com/Checkmarx/ast-cli/releases/download/2.3.55/ast-cli_2.3.55_linux_x64.tar.gz"
       sha256 "a8cf3222c88590cd355f4af6f9d10938f8ff834c44c1a80cf126a5d3f039c764"
 
       def install
